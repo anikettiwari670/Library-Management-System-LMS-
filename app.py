@@ -81,7 +81,7 @@ def main_menu():
         st.header("📤 Issue a Book")
         book_list = list(BookVerse.keys())
         selected_book = st.selectbox("Select a Book", book_list)
-        username = st.text_input("Enter the name of the person issuing the book")
+        username = st.text_input("Enter the Name of the Person Issuing the Book")
 
         if st.button("Issue Book"):
             if BookVerse[selected_book]["Availability"]:
@@ -134,3 +134,4 @@ if not st.session_state.logged_in:
     login_page()
 else:
     main_menu()
+
